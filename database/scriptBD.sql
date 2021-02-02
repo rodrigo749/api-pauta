@@ -6,6 +6,11 @@ CREATE TABLE usuarios(
 	
 )
 
+CREATE TABLE voto(
+	id INTEGER PRIMARY KEY IDENTITY,
+	voto VARCHAR(50) NOT NULL,
+)
+
 INSERT INTO usuarios(cpf)
 VALUES ('admin')
 
