@@ -14,8 +14,8 @@ exports.create = async(dados) => {
     const pool = await poolPromise;
     const rs = await pool 
                 .request()
-                .query(`INSERT INTO voto (voto)
-                        VALUES (UPPER('${dados.voto}'))`);
+                .query(`INSERT INTO voto (id_pauta, voto )
+                        VALUES ('${dados.id_pauta}','${dados.voto}') `);
                         
     return rs.rowsAffected;                                
 }

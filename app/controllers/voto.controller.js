@@ -1,7 +1,7 @@
 const Voto = require ('../models/voto.model');
 
 exports.create = async(req, res) =>{
-    const votos = await Voto.create(req.body);
+    const voto = await Voto.create(req.body);
 
     if(voto){
         res.status(200).send({message:'Voto cadastrado com sucesso'})
@@ -13,7 +13,7 @@ exports.create = async(req, res) =>{
 
 exports.getAll = async(req, res) =>{
      
-    const colaboradores = await Colaboradores.getAll();
-    res.status(200).send(colaboradores)
+    const voto = await Voto.getAll();
+    res.status(200).send(voto)
 
 }
